@@ -2,14 +2,13 @@ package com.tutorialmicroservicios.userservice.feignclients;
 
 import com.tutorialmicroservicios.userservice.model.Car;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "car-service", url = "http://localhost:8002/car")
+//@FeignClient(name = "car-service", url = "http://localhost:8002/car")
+//con eureka ya no necesitamos la url
+@FeignClient(name = "car-service", path = "/car")
 public interface CarFeignClient {
 
     @PostMapping()
