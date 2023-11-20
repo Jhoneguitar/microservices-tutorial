@@ -45,7 +45,7 @@ spring:
             token-uri: http://localhost:8180/realms/tutorial-realm/protocol/openid-connect/token
         registration:
           tutorial-client:
-            priveder: keycloak
+            provider: keycloak
             client-id: tutorial-client
             client-secret: t5eXvwnmZ3H5T5mJ1uYRylBYPtkfyWYO
             authorization-grant-type: authorization_code

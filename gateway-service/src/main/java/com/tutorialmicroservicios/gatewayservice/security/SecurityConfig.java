@@ -13,10 +13,10 @@ public class SecurityConfig {
 
     @Bean
     public SecurityWebFilterChain filterChain(ServerHttpSecurity http){
-       // http.authorizeExchange().anyExchange().authenticated()
-       //         .and()
-       //         .oauth2Login(Customizer.withDefaults());
-       // http.csrf().disable();
+//        http.authorizeExchange().anyExchange().authenticated()
+//                .and()
+//                .oauth2Login(Customizer.withDefaults());
+//        http.csrf().disable();
         http.authorizeExchange(exchanges -> exchanges
                 .anyExchange().authenticated())
                 .oauth2Login(Customizer.withDefaults())
